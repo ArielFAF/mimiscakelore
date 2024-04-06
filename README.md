@@ -11,10 +11,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ng g class modelos/torta --type=model --skip-tests
+
 ng g s servicios/torta --skip-tests
+
 ng g c componentes/show --skip-tests
+
 ng g c componentes/create --skip-tests
+
 ng g c componentes/edit --skip-tests
+
 
 ## Build
 
