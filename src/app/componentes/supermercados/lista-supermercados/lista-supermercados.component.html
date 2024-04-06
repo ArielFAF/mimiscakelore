@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let supermercado of Supermercado; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ supermercado.name }}</td>
+            <td>
+                <span (click)="removerSupermercado(supermercado)" class="btn btn-danger"><i class="fas fa-trash"></i>
+                    Eliminar</span> &nbsp;
+                <span routerLink="/editar-supermercado/{{supermercado.id}}" class="btn btn-primary"><i
+                        class="fas fa-edit"></i> Editar</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

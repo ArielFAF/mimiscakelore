@@ -1,0 +1,17 @@
+<form [formGroup]="supermercadoForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+        <label for="name">Nombre</label>
+        <input type="text" formControlName="name" class="form-control" placeholder="Agrega un nombre de supermercado" required>
+    </div>
+
+    <div class="mb-3">
+        <button class="btn btn-success" type="submit" [disabled]="!supermercadoForm.valid">
+          <i class="fas fa-plus-circle"></i> Grabar
+        </button>
+
+        <button style="margin-left: 5px" class="btn btn-secondary" type="reset" >
+          <i class="fas fa-sync-alt"></i> Limpiar
+        </button>
+    </div>
+
+</form>

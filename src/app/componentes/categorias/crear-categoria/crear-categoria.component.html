@@ -1,0 +1,23 @@
+<form [formGroup]="categoriaForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+        <label for="name">Nombre</label>
+        <input type="text" formControlName="name" class="form-control" placeholder="Agrega un nombre de categoria" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="order">Orden</label>
+        <input type="number" formControlName="order" class="form-control" placeholder="Agrega el orden" required>
+    </div>
+
+    <div class="mb-3">
+        <button class="btn btn-success" type="submit" [disabled]="!categoriaForm.valid">
+          <i class="fas fa-plus-circle"></i> Grabar
+        </button>
+
+        <button style="margin-left: 5px" class="btn btn-secondary" type="reset" >
+            <!-- (click)="resetForm(categoryForm)" -->
+          <i class="fas fa-sync-alt"></i> Limpiar
+        </button>
+    </div>
+
+</form>

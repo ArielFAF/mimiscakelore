@@ -1,0 +1,28 @@
+<h2>Component show</h2>
+
+<div class="d-grip gap-2 mt-4">
+    <a routerLink="/create" class="btn btn-primary" type="button">Create</a>
+</div>
+
+<table class="table table-hover table-striped">
+    <thead class="bg dark text-white">
+        <tr>
+            <th>Nombre</th>
+            <th>Tamaño</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let torta of Tortas">
+            <td>{{torta.name}}</td>
+            <td>{{torta.size}}</td>
+            <td>{{torta.price}}</td>
+            <td>
+                <button routerLink="/edit/{{torta.id}}" class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                <button (click)="deleteRow(torta)" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button> 
+            </td>
+        </tr>
+    </tbody>
+</table>

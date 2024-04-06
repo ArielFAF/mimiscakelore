@@ -1,0 +1,12 @@
+<form [formGroup]="editarForm" (submit)="onSubmit()" novalidate>
+    <div class="mb-3">
+        <label >Nombre</label>
+        <input type="text" formControlName="name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-success"><i class="fas fa-plus-circle"></i> Actualizar</button>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <button type="reset" class="btn btn-secondary"><i class="fas fa-sync-alt"></i> Limpiar</button>
+    </div>
+</form>

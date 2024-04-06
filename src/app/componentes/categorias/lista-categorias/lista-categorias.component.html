@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Orden</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categoria of Categoria; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ categoria.name }}</td>
+            <td>{{ categoria.order }}</td>
+            <td>
+                <span (click)="removerCategoria(categoria)" class="btn btn-danger"><i class="fas fa-trash"></i> Eliminar</span> &nbsp;
+                <span routerLink="/editar-categoria/{{categoria.id}}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
